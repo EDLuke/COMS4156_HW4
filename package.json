@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-native-scripts": "1.5.0",
     "jest-expo": "^21.0.2",
+    "react-native-savor": "^0.1.12",
+    "react-native-scripts": "1.5.0",
     "react-test-renderer": "16.0.0-alpha.12"
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
@@ -13,7 +14,18 @@
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
-    "test": "node node_modules/jest/bin/jest.js --watch"
+    "test": "node node_modules/jest/bin/jest.js --watch",
+	"savor": "react-native-savor",
+	"test": "react-native-savor test",
+	"lint": "react-native-savor lint",
+	"cover": "react-native-savor cover",
+	"coveralls": "react-native-savor coveralls",
+	"codacy": "react-native-savor codacy",
+    "codeclimate": "react-native-savor codeclimate"
+  },
+  "babel": {
+	"plugins": ["transform-react-jsx"],
+	"presets": ["react-native", {}]
   },
   "jest": {
     "preset": "jest-expo"
