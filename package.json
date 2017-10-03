@@ -4,6 +4,7 @@
   "private": true,
   "devDependencies": {
     "jest-expo": "^21.0.2",
+    "jest-fetch-mock": "^1.2.1",
     "react-native-savor": "^0.1.12",
     "react-native-scripts": "1.5.0",
     "react-test-renderer": "16.0.0-alpha.12"
@@ -14,25 +15,33 @@
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
-    "test": "node node_modules/jest/bin/jest.js --watch",
-	"savor": "react-native-savor",
-	"test": "react-native-savor test",
-	"lint": "react-native-savor lint",
-	"cover": "react-native-savor cover",
-	"coveralls": "react-native-savor coveralls",
-	"codacy": "react-native-savor codacy",
+    "test": "jest",
+    "savor": "react-native-savor",
+    "lint": "react-native-savor lint",
+    "cover": "react-native-savor cover",
+    "coveralls": "react-native-savor coveralls",
+    "codacy": "react-native-savor codacy",
     "codeclimate": "react-native-savor codeclimate"
   },
   "babel": {
-	"plugins": ["transform-react-jsx"],
-	"presets": ["react-native", {}]
+    "plugins": [
+      "transform-react-jsx"
+    ],
+    "presets": [
+      "react-native",
+      {}
+    ]
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "react-native",
+    "setupFiles": [
+	    "./setupJest.js"
+    ]
   },
   "dependencies": {
     "expo": "^21.0.0",
     "react": "16.0.0-alpha.12",
-    "react-native": "^0.48.4"
+    "react-native": "^0.48.4",
+    "whatwg-fetch": "^2.0.3"
   }
 }

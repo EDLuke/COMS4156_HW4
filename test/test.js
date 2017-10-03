@@ -3,7 +3,6 @@ import React, {
     Text,
     StyleSheet
 } from 'react-native'
-import savor from '../../../'
 import ToyProject from '../App'
  
 const TestText = (<Text>test</Text>)

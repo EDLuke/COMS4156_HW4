@@ -9,9 +9,22 @@ export default class ToyProject extends Component{
   }
   
   componentDidMount(){
+	  function checkStatus(results) {
+		  if (results.status >= 200 && results.status < 300) {
+			  return results
+		  } else {
+			  var error = new Error(results.statusText)
+			  error.response = results
+			  throw error
+		  }
+	  }	  
+
+	  function parseResults(results) {
+		  return results.json()
+	  }
 	  fetch('https://randomuser.me/api/?results=5')
-	  .then(results => {
-		return results.json();})
+	  .then(checkStatus)
+	  .then(parseResults)
 	  .then(data => {
 		  let pictures = data.results.map((pic) => {
 			  return(
@@ -25,6 +38,8 @@ export default class ToyProject extends Component{
 		  })
 		  this.setState({pictures: pictures});
 		  console.log("state", this.state.pictures);
+		}).catch(error => {
+			console.log("request failed", error);
 		})
   }
   

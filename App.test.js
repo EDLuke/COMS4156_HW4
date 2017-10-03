@@ -1,9 +1,31 @@
 import React from 'react';
-import App from './App';
+import { ToyProject } from './App';
+import App from './App'
 
-import renderer from 'react-test-renderer';
+describe("App", function() {
 
-it('renders without crashing', () => {
-  const rendered = renderer.create(<App />).toJSON();
-  expect(rendered).toBeTruthy();
+	beforeEach(function() {
+		
+		global.fetch = jest.fn().mockImplementation(() => {
+			var p = new Promise((resolve, reject) => {
+				resolve({
+						Id: '123', 
+						json: function() { 
+							return {Id: '123'}
+					        }
+					});
+				});
+
+		        return p;
+		   	 });
+
+	});
+
+
+	it("fetches successfully", async function() {
+	  	const response = await fetch('https://randomuser.me/api/?results=5');
+	  	console.log(response);
+	  	expect(response.Id).toBe('123'); 
+	});
+
 });
