@@ -1,3 +1,5 @@
+[![Nevercode build status](https://app.nevercode.io/api/projects/78cb0f2a-a3ad-43aa-a4fd-bc8c70b6db8b/workflows/3ebb36ed-2b56-4735-b2c3-378c089b152b/status_badge.svg?branch=master)](https://app.nevercode.io/#/project/78cb0f2a-a3ad-43aa-a4fd-bc8c70b6db8b/workflow/3ebb36ed-2b56-4735-b2c3-378c089b152b/latestBuild?branch=master)
+
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
 Below you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md).
