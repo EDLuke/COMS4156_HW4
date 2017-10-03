@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
 import { AppRegistry, ListView, StyleSheet, Text, View, Image, Button } from 'react-native';
-import dbcred from './dbcred.json';
 
 
 export default class ToyProject extends Component{
   constructor(props){
     super(props);
-	this.state = {pictures: []};
+	  this.state = {pictures: []};
   }
   
   componentDidMount(){
