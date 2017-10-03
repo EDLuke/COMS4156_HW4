@@ -1,6 +1,6 @@
 import React from 'react';
-import { ToyProject } from './App';
-import App from './App'
+import { ToyProject } from '../App';
+import App from '../App'
 
 describe("App", function() {
 
