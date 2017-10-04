@@ -48,6 +48,11 @@
     "moduleDirectories": [
 	    "packages",
 	    "node_modules"
+    ],
+    "modulePathIgnorePatterns": [
+	          "react",
+		  "react-native",
+		  "jest-resolve"
     ]
     
   },
