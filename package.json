@@ -53,7 +53,10 @@
 	          "react",
 		  "react-native",
 		  "jest-resolve"
-    ]
+    ],
+    "globals": {
+		"__DEV__": true
+    }
     
   },
   "dependencies": {
