@@ -36,7 +36,20 @@
     "preset": "react-native",
     "setupFiles": [
 	    "./setupJest.js"
+    ],
+    "testPathIgnorePatterns": [
+	    "/node_modules/"
+    ],
+    "moduleFileExtensions": [
+	    "js",
+	    "jsx",
+	    "json"
+    ],
+    "moduleDirectories": [
+	    "packages",
+	    "node_modules"
     ]
+    
   },
   "dependencies": {
     "expo": "^21.0.0",
